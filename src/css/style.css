@@ -61,3 +61,13 @@ body {
 #actions button:hover {
 background-color: rgb(173, 173, 173);
 }
+
+#marks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+#marks-list p:first-child{
+    margin-top: 1.5rem;
+}
