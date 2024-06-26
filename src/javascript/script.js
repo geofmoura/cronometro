@@ -27,3 +27,15 @@ const toggleTimer = () => {
 
     clearInterval(intervalId);
 
+    if (action == 'start' || action == 'continue') {
+        intervalId = setInterval(() => {
+            timer += 1;
+            setTimer(timer);
+    }, 10);
+        button.setAttribute('action', 'pause');
+        button.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    } else if (action == 'pause') {
+        button.setAttribute('action', 'continue');
+        button.innerHTML = '<i class="fa-solid fa-play"></i>';
+    }
+}
