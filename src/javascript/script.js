@@ -39,3 +39,9 @@ const toggleTimer = () => {
         button.innerHTML = '<i class="fa-solid fa-play"></i>';
     }
 }
+
+const markTime = () => {
+    marks.push(timer);
+    addMarkToList(marks.length, timer);
+}
+
