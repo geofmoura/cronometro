@@ -12,3 +12,18 @@ const formatTime = (time) => {
 
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${hundredths.toString().padStart(2, '0')}`;
 }
+
+const setTimer = (time) => {
+    timerEl.innerText = formatTime(time);
+}
+
+const addMarkToList = (markIndex, markTime) => {
+    marksList.innerHTML += `<p>Marca ${markIndex}: ${formatTime(markTime)}</p>`;
+}
+
+const toggleTimer = () => {
+    const button = document.getElementById('power');
+    const action = button.getAttribute('action');
+
+    clearInterval(intervalId);
+
